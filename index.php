@@ -4,7 +4,7 @@ require_once CLASSES . "/Router.php";
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -14,7 +14,7 @@ require_once CLASSES . "/Router.php";
 </head>
 
 <body>
-
+    <h1>Test</h1>
     <?php
     include TEMPLATE_PARTS . "/_header.php";
     ?>
