@@ -17,11 +17,6 @@ require_once CLASSES . "/Router.php";
 <body>
 
     <?php
-    // var_dump($_SERVER);
-
-    ?>
-
-    <?php
     include TEMPLATE_PARTS . "/_header.php";
     ?>
     <main>
