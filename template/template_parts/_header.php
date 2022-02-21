@@ -1,10 +1,10 @@
 <header>
     <nav>
         <ul>
-            <li><a href="index.php?page=home">Accueil</a></li>
-            <li><a href="index.php?page=about">About</a></li>
-            <li><a href="index.php?page=contact">Contact</a></li>
-            <li><a href="index.php?page=services">Services</a></li>
+            <li><a href="home">Accueil</a></li>
+            <li><a href="about">About</a></li>
+            <li><a href="contact">Contact</a></li>
+            <li><a href="services">Services</a></li>
         </ul>
     </nav>
 </header>
