@@ -7,4 +7,4 @@ define("CLASSES", "classes");
 
 define('ROUTES', include 'routes.php');
 define('DEFAULT_ROUTE', "home");
-define('NOT_FOUND_ROUTE', "404");
+define('NOT_FOUND_ROUTE', "page404");

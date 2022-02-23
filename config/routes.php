@@ -1,8 +1,9 @@
 <?php
 
 return [
-    "/home" => "home.php",
-    "/about" => "about.php",
-    "/contact" => "contact.php",
-    "/services" => "services.php",
+    "/home" => "home",
+    "/about" => "about",
+    "/contact" => "contact",
+    "/services" => "services",
+    "/users" => "users"
 ];
