@@ -1,31 +1,74 @@
 <?php
 
+require SERVICES . "/LoginService.php";
+require SERVICES . "/UserService.php";
+
 class Controller
 {
+    private LoginService $loginService;
+
+    public function __construct()
+    {
+        $this->loginService = new LoginService();
+    }
+
+    public function getUsers()
+    {
+        $userService = new UserService();
+        echo json_encode($userService->findAll());
+    }
 
     public function home()
     {
-        die("home");
+        $this->render("/home.php");
     }
 
     public function about()
     {
+        $this->render("/about.php");
     }
 
     public function contact()
     {
+        $this->render("/contact.php");
     }
 
     public function services()
     {
+        $this->render("/services.php");
     }
 
     public function users()
     {
+        $userService = new UserService();
+        $this->render("/users.php", ["users" => $userService->findAll(), "toto" => "Toto"]);
     }
 
     public function page404()
     {
-        die("404");
+        $this->render("/page404.php");
+    }
+
+    public function loginForm()
+    {
+        $this->render("/connexion.php");
+    }
+
+    public function handleConnexionForm()
+    {
+        $this->loginService->handleForm();
+        header("location: ./home");
+    }
+
+    public function logout()
+    {
+        unset($_SESSION["user"]);
+        header("location: ./home");
+    }
+
+    public function render($vue, $datas = [])
+    {
+        extract($datas);
+        include TEMPLATE_PAGES . $vue;
     }
 }
