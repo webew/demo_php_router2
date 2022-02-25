@@ -1,15 +1,20 @@
 <?php
-
+require CLASSES . "/AbstractController.php";
 require SERVICES . "/LoginService.php";
 require SERVICES . "/UserService.php";
 
-class Controller
+class Controller extends AbstractController
 {
     private LoginService $loginService;
 
     public function __construct()
     {
         $this->loginService = new LoginService();
+    }
+
+    public function estella()
+    {
+        $this->render("/estella.php");
     }
 
     public function getUsers()
@@ -64,11 +69,5 @@ class Controller
     {
         unset($_SESSION["user"]);
         header("location: ./home");
-    }
-
-    public function render($vue, $datas = [])
-    {
-        extract($datas);
-        include TEMPLATE_PAGES . $vue;
     }
 }

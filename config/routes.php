@@ -13,5 +13,6 @@ return [
     "/getUsers" => "getUsers",
     "/login" => "loginForm",
     "/handleForm" => "handleConnexionForm",
-    "/logout" => "logout"
+    "/logout" => "logout",
+    "/estella" => "estella"
 ];
